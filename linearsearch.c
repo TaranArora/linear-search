@@ -3,7 +3,7 @@
 int main(){
 
     char array[100];
-    int num,i,search;
+    int num,i,search,flag;
     printf("Enter number of elements:\n");
     scanf("%d",&num);
 
@@ -21,9 +21,12 @@ int main(){
 
         if(array[i] == search){
             
-            printf("%d found at %d",search,i+1);
-        }
-        
-        
+            printf("%d found at position %d",search,i+1);
+
+            flag=1;
+        }       
+    }
+    if(flag!=1){
+        printf("%d not found",search);
     }
 }
